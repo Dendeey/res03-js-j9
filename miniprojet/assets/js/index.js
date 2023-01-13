@@ -30,6 +30,18 @@ window.addEventListener("DOMContentLoaded", function()
     console.log(confirmPasswordField);
     
     let form = new Form();
+    form.addField(firstname);
+    form.addField(lastname);
+    form.addField(email);
+    form.addField(password);
+    form.addField(confirmPassword);
+    console.log(form);
     
+    let submitBtn = document.querySelector("#user-information button");
+    submitBtn.addEventListener("submit", function(event)
+    {
+        event.preventDefault();
+        form.submit();
+    });
     
 });

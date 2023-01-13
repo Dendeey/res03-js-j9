@@ -5,7 +5,7 @@ class Field
     #name;
     
     constructor(element)
-    {
+    {   
         this.#element = element;
         this.#errors = [];
         
