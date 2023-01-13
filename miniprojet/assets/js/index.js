@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", function()
     form.addField(email);
     form.addField(password);
     form.addField(confirmPassword);
-    console.log(form);
+    
     
     let submitBtn = document.querySelector("#user-information button");
     submitBtn.addEventListener("submit", function(event)
@@ -44,4 +44,13 @@ window.addEventListener("DOMContentLoaded", function()
         form.submit();
     });
     
+    let inputs = document.querySelectorAll("#user-information input");
+    for(let i = 0; i < inputs.length; i++)
+    {
+        inputs[i].addEventListener("change", function()
+        {
+            form.validate();
+        });
+    }
+    console.log(form);
 });

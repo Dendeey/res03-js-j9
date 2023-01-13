@@ -30,7 +30,11 @@ class Form
     
     validate()
     {
-        
+        for(let i = 0; i < this.#fields.length; i++)
+        {
+            this.#fields[i].validate();
+            console.log("Form envoyé")
+        }
     }
     
     toJSON()
